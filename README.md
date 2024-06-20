@@ -20,7 +20,7 @@ cd ../dwmblocks
 make && sudo make install
 cd ..
 # This will overwrite your previous configuration
-cp .config/ ~/
+cp -r .config/ ~/
 cp startdwm.sh /usr/local/bin/
 ```
 
