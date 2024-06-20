@@ -1,0 +1,14 @@
+import = [
+    "~/.config/alacritty/themes/themes/gruvbox_dark.toml"
+]
+
+[shell]
+program = "/bin/fish"
+# args = ["-l"]
+
+[font]
+size = 10.0
+
+[font.normal]
+family = "JetBrainsMonoNL NFP"
+style = "Bold"
