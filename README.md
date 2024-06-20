@@ -26,7 +26,7 @@ cp startdwm.sh /usr/local/bin/
 
 If you use a display manager
 ```bash
-cp dwm.desktop /usr/local/share/xsessions/
+sudo cp dwm.desktop /usr/local/share/xsessions/
 ```
 If you don't
 ```bash
