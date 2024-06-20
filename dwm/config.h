@@ -23,7 +23,7 @@ static const char *fonts[]               = {
   "JetBrainsMonoNL NFP:size=13:style=Bold", 
   "Font Awesome 6 Free Solid:size=13"
 };
-static const char dmenufont[]            = "JetBrainsMonoNL NFP:size=13:style=Bold";
+static const char dmenufont[]            = "JetBrainsMonoNL NFP:size=20:style=Bold";
 
 static char c000000[]                    = "#000000"; // placeholder value
 
@@ -238,7 +238,7 @@ static const Key keys[] = {
 	{ MODKEY|Mod4Mask|ShiftMask,    XK_0,          defaultgaps,            {0} },
 	{ MODKEY,                       XK_Tab,        view,                   {0} },
 	{ MODKEY|ControlMask,           XK_z,          showhideclient,         {0} },
-	{ MODKEY,                       XK_q,          killclient,             {0} },
+	{ MODKEY|ShiftMask,             XK_c,          killclient,             {0} },
 	{ MODKEY|ShiftMask,             XK_q,          quit,                   {0} },
 	{ MODKEY|ShiftMask,             XK_r,          quit,                   {1} },
 	{ MODKEY,                       XK_t,          setlayout,              {.v = &layouts[0]} },
@@ -256,11 +256,11 @@ static const Key keys[] = {
   /* custom  */
 	{ 0,                            XF86XK_AudioMute,           spawn,          SHCMD("pactl set-sink-mute 0 toggle") },
 	{ 0,                            XF86XK_AudioLowerVolume,    spawn,          SHCMD("pactl set-sink-volume 0 -3%") },
-	{ 0,                            XF86XK_AudioRaiseVolume,    spawn,          SHCMD("pactl set-sink-volume 0 +3%") },
-	{ 0,                            XF86XK_MonBrightnessUp,     spawn,          SHCMD("brightnessctl g +5%") },
-	{ 0,                            XF86XK_MonBrightnessDown,   spawn,          SHCMD("brightnessctl g 5%-") },
+  { 0,                            XF86XK_AudioRaiseVolume,    spawn,          SHCMD("pactl set-sink-volume 0 +3%") },
+  { 0,                            XF86XK_MonBrightnessUp,     spawn,          SHCMD("brightnessctl g +5%") },
+  { 0,                            XF86XK_MonBrightnessDown,   spawn,          SHCMD("brightnessctl g 5%-") },
   { 0,                            XK_Print,                   spawn,          {.v = flameshot} },
-	{ 0,                            XK_ISO_Next_Group,          spawn,          SHCMD("pkill -RTMIN+10 dwmblocks") },
+  { 0,                            XK_ISO_Next_Group,          spawn,          SHCMD("pkill -RTMIN+10 dwmblocks") },
 
   TAGKEYS(                        XK_1,                                  0)
 	TAGKEYS(                        XK_2,                                  1)
