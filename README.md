@@ -32,6 +32,4 @@ If you don't
 ```bash
 echo "exec /usr/local/bin/startdwm.sh" >> ~/.xinitrc
 ```
-```
-```
 
